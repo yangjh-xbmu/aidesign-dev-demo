@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>版式设计案例集</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1E293B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="bg-dark text-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-layer-group text-primary text-2xl"></i>
+                <span class="text-xl font-bold">设计案例集</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-primary transition-colors">首页</a>
+                <a href="#" class="hover:text-primary transition-colors">分类</a>
+                <a href="#" class="hover:text-primary transition-colors">关于我们</a>
+                <a href="#" class="hover:text-primary transition-colors">联系方式</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部横幅 -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">现代版式设计案例集</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">探索创新的设计理念，获取灵感，提升您的设计技能</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#cases" class="bg-white text-indigo-800 px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors flex items-center">
+                    <i class="fas fa-th-large mr-2"></i> 浏览案例
+                </a>
+                <a href="#" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:bg-opacity-10 transition-colors flex items-center">
+                    <i class="fas fa-info-circle mr-2"></i> 了解更多
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 筛选栏 -->
+    <div class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex items-center space-x-2">
+                    <span class="text-gray-700">筛选：</span>
+                    <select class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <option>所有类别</option>
+                        <option>平面设计</option>
+                        <option>网页设计</option>
+                        <option>UI/UX设计</option>
+                        <option>排版设计</option>
+                    </select>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="text-gray-700">排序：</span>
+                    <select class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <option>最新发布</option>
+                        <option>最受欢迎</option>
+                        <option>评分最高</option>
+                    </select>
+                </div>
+                <div class="relative">
+                    <input type="text" placeholder="搜索案例..." class="border border-gray-300 rounded-md pl-10 pr-4 py-2 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-primary">
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 案例展示区 -->
+    <section id="cases" class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">精选设计案例</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 案例卡片 1 -->
+                <a href="detail.html?id=1" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="设计案例" class="w-full h-56 object-cover">
+                            <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 rounded">平面设计</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">极简主义品牌标识设计</h3>
+                            <p class="text-gray-600 mb-4">探索如何通过简约的设计语言传达品牌核心价值观，创造令人难忘的视觉识别系统。</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-eye text-gray-400 mr-1"></i>
+                                    <span class="text-gray-500 text-sm">1,234</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="text-gray-500 text-sm">4.8</span>
+                                </div>
+                                <span class="text-primary font-medium">查看详情 <i class="fas fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 案例卡片 2 -->
+                <a href="detail.html?id=2" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="设计案例" class="w-full h-56 object-cover">
+                            <div class="absolute top-4 right-4 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">UI/UX设计</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">未来科技感UI界面设计</h3>
+                            <p class="text-gray-600 mb-4">结合霓虹色彩与玻璃拟态效果，打造具有未来感的用户界面，提供沉浸式的用户体验。</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-eye text-gray-400 mr-1"></i>
+                                    <span class="text-gray-500 text-sm">2,567</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="text-gray-500 text-sm">4.9</span>
+                                </div>
+                                <span class="text-primary font-medium">查看详情 <i class="fas fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 案例卡片 3 -->
+                <a href="detail.html?id=3" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="设计案例" class="w-full h-56 object-cover">
+                            <div class="absolute top-4 right-4 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded">排版设计</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">现代杂志排版设计</h3>
+                            <p class="text-gray-600 mb-4">探索现代杂志排版的艺术，如何通过字体、间距和层次结构创造引人入胜的阅读体验。</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-eye text-gray-400 mr-1"></i>
+                                    <span class="text-gray-500 text-sm">1,876</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="text-gray-500 text-sm">4.7</span>
+                                </div>
+                                <span class="text-primary font-medium">查看详情 <i class="fas fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 案例卡片 4 -->
+                <a href="detail.html?id=4" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="设计案例" class="w-full h-56 object-cover">
+                            <div class="absolute top-4 right-4 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded">网页设计</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">响应式电商网站设计</h3>
+                            <p class="text-gray-600 mb-4">从桌面到移动设备，打造无缝的购物体验，提高转化率和用户满意度。</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-eye text-gray-400 mr-1"></i>
+                                    <span class="text-gray-500 text-sm">3,421</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="text-gray-500 text-sm">4.6</span>
+                                </div>
+                                <span class="text-primary font-medium">查看详情 <i class="fas fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 案例卡片 5 -->
+                <a href="detail.html?id=5" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="设计案例" class="w-full h-56 object-cover">
+                            <div class="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">平面设计</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">创意海报设计系列</h3>
+                            <p class="text-gray-600 mb-4">通过大胆的色彩和创新的构图，传达强烈的视觉冲击力，吸引目标受众的注意力。</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-eye text-gray-400 mr-1"></i>
+                                    <span class="text-gray-500 text-sm">2,198</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="text-gray-500 text-sm">4.5</span>
+                                </div>
+                                <span class="text-primary font-medium">查看详情 <i class="fas fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 案例卡片 6 -->
+                <a href="detail.html?id=6" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="设计案例" class="w-full h-56 object-cover">
+                            <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">UI/UX设计</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">移动应用界面设计</h3>
+                            <p class="text-gray-600 mb-4">专注于用户体验的移动应用设计，通过简洁的界面和流畅的交互提升用户满意度。</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-eye text-gray-400 mr-1"></i>
+                                    <span class="text-gray-500 text-sm">2,765</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="text-gray-500 text-sm">4.8</span>
+                                </div>
+                                <span class="text-primary font-medium">查看详情 <i class="fas fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 加载更多按钮 -->
+            <div class="text-center mt-12">
+                <button class="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors flex items-center mx-auto">
+                    <i class="fas fa-sync-alt mr-2"></i> 加载更多案例
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅区域 -->
+    <section class="bg-gradient-to-r from-indigo-800 to-blue-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">订阅我们的设计灵感通讯</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">每周获取最新的设计趋势、技巧和资源，提升您的设计技能</p>
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="您的电子邮箱" class="flex-1 px-4 py-3 rounded-l-lg focus:outline-none">
+                <button class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-r-lg font-medium transition-colors">
+                    订阅 <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-layer-group text-primary text-2xl"></i>
+                        <span class="text-xl font-bold">设计案例集</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">探索创新的设计理念，获取灵感，提升您的设计技能</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">案例集</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">关于我们</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">联系方式</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">案例分类</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">平面设计</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">网页设计</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">UI/UX设计</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">排版设计</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-primary mr-2"></i> <span class="text-gray-400">北京市朝阳区设计创意产业园</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone text-primary mr-2"></i> <span class="text-gray-400">+86 123 4567 8901</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope text-primary mr-2"></i> <span class="text-gray-400">contact@designcases.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 设计案例集. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.querySelector('.md\\:hidden button').addEventListener('click', function() {
+            alert('移动端菜单功能尚未实现');
+        });
+
+        // 加载更多按钮点击事件
+        document.querySelector('.mt-12 button').addEventListener('click', function() {
+            alert('加载更多功能尚未实现');
+        });
+    </script>
+</body>
+</html>

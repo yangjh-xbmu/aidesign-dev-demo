@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例详情 - 版式设计案例集</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1E293B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .image-gallery img {
+            transition: transform 0.3s ease;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="bg-dark text-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-layer-group text-primary text-2xl"></i>
+                <span class="text-xl font-bold">设计案例集</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-primary transition-colors">首页</a>
+                <a href="#" class="hover:text-primary transition-colors">分类</a>
+                <a href="#" class="hover:text-primary transition-colors">关于我们</a>
+                <a href="#" class="hover:text-primary transition-colors">联系方式</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center text-sm text-gray-600">
+                <a href="index.html" class="hover:text-primary transition-colors">首页</a>
+                <i class="fas fa-chevron-right text-xs mx-2"></i>
+                <a href="#" class="hover:text-primary transition-colors">平面设计</a>
+                <i class="fas fa-chevron-right text-xs mx-2"></i>
+                <span class="text-gray-800 font-medium">极简主义品牌标识设计</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 案例详情内容 -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <!-- 案例头部信息 -->
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" alt="设计案例" class="w-full h-96 object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                    <div class="p-8 text-white w-full">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded">平面设计</span>
+                            <span class="bg-gray-700 bg-opacity-50 text-white text-xs font-bold px-2 py-1 rounded flex items-center">
+                                <i class="fas fa-calendar-alt mr-1"></i> 2023-06-15
+                            </span>
+                        </div>
+                        <h1 class="text-3xl md:text-4xl font-bold mb-2">极简主义品牌标识设计</h1>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-eye text-gray-300 mr-1"></i>
+                                <span class="text-gray-300">1,234 浏览</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="text-gray-300">4.8 评分</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-comment text-gray-300 mr-1"></i>
+                                <span class="text-gray-300">32 评论</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 案例内容 -->
+            <div class="p-8">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <!-- 左侧内容 -->
+                    <div class="md:w-2/3">
+                        <div class="prose max-w-none">
+                            <h2 class="text-2xl font-bold mb-4">项目概述</h2>
+                            <p class="text-gray-700 mb-6">本项目旨在为一家科技初创公司创建一套极简主义的品牌标识系统。客户需要一个能够在各种媒介上保持清晰度和识别度的标识，同时传达公司的创新精神和前瞻性思维。</p>
+                            
+                            <h2 class="text-2xl font-bold mb-4">设计理念</h2>
+                            <p class="text-gray-700 mb-6">我们采用了极简主义设计原则，专注于几何形状和负空间的巧妙运用。通过简化形式和减少不必要的元素，创造出一个既现代又永恒的标识。色彩方案选择了深蓝色和浅灰色的组合，传达专业性和技术感，同时保持视觉上的平衡。</p>
+
+                            <div class="my-8 bg-gray-50 border-l-4 border-primary p-4 rounded">
+                                <p class="italic text-gray-700">"极简不是缺乏设计，而是达到了设计的完美状态，没有多余的元素，每一个细节都有其存在的意义。"</p>
+                                <p class="text-right text-gray-500 mt-2">— 设计师感言</p>
+                            </div>
+
+                            <h2 class="text-2xl font-bold mb-4">设计过程</h2>
+                            <p class="text-gray-700 mb-6">设计过程始于深入的市场研究和竞争对手分析，了解行业内的视觉语言和趋势。随后进行了多轮草图和概念探索，从数十个初始想法中筛选出最有潜力的方向。经过客户反馈和多次迭代，最终确定了现在的设计方案。</p>
+
+                            <h2 class="text-2xl font-bold mb-4">应用展示</h2>
+                            <p class="text-gray-700 mb-6">为了展示标识的多功能性和一致性，我们创建了一系列应用场景，包括名片、信笺、数字界面和环境标识等。每个应用都经过精心设计，确保品牌形象在不同场景下保持统一而鲜明。</p>
+                        </div>
+
+                        <!-- 图片画廊 -->
+                        <div class="mt-8">
+                            <h3 class="text-xl font-bold mb-4">项目图片</h3>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 image-gallery">
+                                <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="设计图片1" class="rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="设计图片2" class="rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="设计图片3" class="rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1634942537043-1ede3e5c8c6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="设计图片4" class="rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="设计图片5" class="rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="设计图片6" class="rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                            </div>
+                        </div>
+
+                        <!-- 评论区 -->
+                        <div class="mt-12">
+                            <h3 class="text-xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-comments text-primary mr-2"></i> 评论区 (32)
+                            </h3>
+                            
+                            <!-- 评论表单 -->
+                            <div class="bg-gray-50 p-4 rounded-lg mb-8">
+                                <h4 class="font-medium mb-4">发表评论</h4>
+                                <textarea class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-primary resize-none" rows="4" placeholder="分享您对这个设计案例的看法..."></textarea>
+                                <div class="flex justify-between items-center mt-3">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="flex">
+                                            <i class="fas fa-star text-gray-300 hover:text-yellow-400 cursor-pointer"></i>
+                                            <i class="fas fa-star text-gray-300 hover:text-yellow-400 cursor-pointer"></i>
+                                            <i class="fas fa-star text-gray-300 hover:text-yellow-400 cursor-pointer"></i>
+                                            <i class="fas fa-star text-gray-300 hover:text-yellow-400 cursor-pointer"></i>
+                                            <i class="fas fa-star text-gray-300 hover:text-yellow-400 cursor-pointer"></i>
+                                        </div>
+                                        <span class="text-sm text-gray-500">点击评分</span>
+                                    </div>
+                                    <button class="bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
+                                        发表评论
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- 评论列表 -->
+                            <div class="space-y-6">
+                                <!-- 评论1 -->
+                                <div class="border-b border-gray-200 pb-6">
+                                    <div class="flex justify-between items-start">
+                                        <div class="flex items-start space-x-3">
+                                            <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-600">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-medium">张明</h5>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="flex text-yellow-400">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <span class="text-sm text-gray-500">2023-06-18</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="text-gray-400 hover:text-gray-600">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </div>
+                                    <p class="mt-3 text-gray-700">这个设计非常出色，简约而不简单。我特别喜欢标识中负空间的运用，让整体看起来既现代又有深度。色彩选择也很到位，传达了科技感同时保持了专业形象。</p>
+                                    <div class="mt-3 flex items-center space-x-4">
+                                        <button class="text-gray-500 hover:text-primary flex items-center space-x-1">
+                                            <i class="far fa-thumbs-up"></i>
+                                            <span>12</span>
+                                        </button>
+                                        <button class="text-gray-500 hover:text-primary flex items-center space-x-1">
+                                            <i class="far fa-comment"></i>
+                                            <span>回复</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- 评论2 -->
+                                <div class="border-b border-gray-200 pb-6">
+                                    <div class="flex justify-between items-start">
+                                        <div class="flex items-start space-x-3">
+                                            <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-600">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-medium">李华</h5>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="flex text-yellow-400">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div>
+                                                    <span class="text-sm text-gray-500">2023-06-16</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="text-gray-400 hover:text-gray-600">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </div>
+                                    <p class="mt-3 text-gray-700">作为一名设计师，我认为这个项目展示了极简主义设计的精髓。每个元素都经过精心考量，没有多余的装饰，却能清晰传达品牌信息。不过我认为在某些应用场景下，可能需要考虑更多的灵活性。</p>
+                                    <div class="mt-3 flex items-center space-x-4">
+                                        <button class="text-gray-500 hover:text-primary flex items-center space-x-1">
+                                            <i class="far fa-thumbs-up"></i>
+                                            <span>8</span>
+                                        </button>
+                                        <button class="text-gray-500 hover:text-primary flex items-center space-x-1">
+                                            <i class="far fa-comment"></i>
+                                            <span>回复</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- 查看更多评论按钮 -->
+                                <button class="w-full py-3 border border-gray-300 rounded-md text-gray-700 font-medium hover:bg-gray-50 transition-colors flex items-center justify-center">
+                                    <i class="fas fa-comments mr-2"></i> 查看更多评论
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 右侧侧边栏 -->
+                    <div class="md:w-1/3">
+                        <!-- 设计师信息 -->
+                        <div class="bg-gray-50 rounded-xl p-6 mb-6">
+                            <h3 class="text-xl font-bold mb-4">设计师信息</h3>
+                            <div class="flex items-center space-x-3 mb-4">
+                                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="设计师头像" class="w-12 h-12 rounded-full object-cover">
+                                <div>
+                                    <h4 class="font-medium">王小明</h4>
+                                    <p class="text-sm text-gray-500">资深品牌设计师</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mb-4">专注于品牌标识和视觉识别系统设计，拥有10年行业经验，服务过多家知名企业。</p>
+                            <div class="flex space-x-2">
+                                <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- 项目信息 -->
+                        <div class="bg-gray-50 rounded-xl p-6 mb-6">
+                            <h3 class="text-xl font-bold mb-4">项目信息</h3>
+                            <ul class="space-y-3">
+                                <li class="flex justify-between">
+                                    <span class="text-gray-600">客户:</span>
+                                    <span class="font-medium">科技初创公司</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span class="text-gray-600">项目类型:</span>
+                                    <span class="font-medium">品牌标识设计</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span class="text-gray-600">完成时间:</span>
+                                    <span class="font-medium">2023年6月</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span class="text-gray-600">工具:</span>
+                                    <span class="font-medium">Adobe Illustrator, Photoshop</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 标签 -->
+                        <div class="bg-gray-50 rounded-xl p-6 mb-6">
+                            <h3 class="text-xl font-bold mb-4">标签</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="#" class="bg-gray-200 hover:bg-gray-300 transition-colors text-gray-700 px-3 py-1 rounded-md text-sm">
+                                    极简主义
+                                </a>
+                                <a href="#" class="bg-gray-200 hover:bg-gray-300 transition-colors text-gray-700 px-3 py-1 rounded-md text-sm">
+                                    品牌标识
+                                </a>
+                                <a href="#" class="bg-gray-200 hover:bg-gray-300 transition-colors text-gray-700 px-3 py-1 rounded-md text-sm">
+                                    科技
+                                </a>
+                                <a href="#" class="bg-gray-200 hover:bg-gray-300 transition-colors text-gray-700 px-3 py-1 rounded-md text-sm">
+                                    几何
+                                </a>
+                                <a href="#" class="bg-gray-200 hover:bg-gray-300 transition-colors text-gray-700 px-3 py-1 rounded-md text-sm">
+                                    负空间
+                                </a>
+                                <a href="#" class="bg-gray-200 hover:bg-gray-300 transition-colors text-gray-700 px-3 py-1 rounded-md text-sm">
+                                    蓝色
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- 相关案例 -->
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">相关案例</h3>
+                            <div class="space-y-4">
+                                <a href="#" class="flex items-center space-x-3 group">
+                                    <div class="w-20 h-20 rounded-md overflow-hidden flex-shrink-0">
+                                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="相关案例" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium group-hover:text-primary transition-colors">未来科技感UI界面设计</h4>
+                                        <p class="text-sm text-gray-500">UI/UX设计</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center space-x-3 group">
+                                    <div class="w-20 h-20 rounded-md overflow-hidden flex-shrink-0">
+                                        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="相关案例" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium group-hover:text-primary transition-colors">创意海报设计系列</h4>
+                                        <p class="text-sm text-gray-500">平面设计</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center space-x-3 group">
+                                    <div class="w-20 h-20 rounded-md overflow-hidden flex-shrink-0">
+                                        <img src="https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="相关案例" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium group-hover:text-primary transition-colors">现代杂志排版设计</h4>
+                                        <p class="text-sm text-gray-500">排版设计</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 行动号召区域 -->
+    <section class="bg-gradient-to-r from-indigo-800 to-blue-600 text-white py-16 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">需要专业的设计服务？</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">我们的设计团队随时准备为您的项目提供创意解决方案</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="bg-white text-indigo-800 px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors flex items-center">
+                    <i class="fas fa-envelope mr-2"></i> 联系我们
+                </a>
+                <a href="#" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:bg-opacity-10 transition-colors flex items-center">
+                    <i class="fas fa-briefcase mr-2"></i> 查看服务
